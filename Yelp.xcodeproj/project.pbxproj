@@ -20,6 +20,7 @@
 		DE5135761B9C4E1D005A77D2 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5135751B9C4E1D005A77D2 /* FiltersViewController.swift */; };
 		DE51357A1B9C9909005A77D2 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5135791B9C9909005A77D2 /* SwitchCell.swift */; };
 		DE51357C1B9C9FEF005A77D2 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE51357B1B9C9FEF005A77D2 /* CustomHeaderCell.swift */; };
+		DE65FC131B9E108400D25307 /* yelp.gif in Resources */ = {isa = PBXBuildFile; fileRef = DE65FC121B9E108400D25307 /* yelp.gif */; };
 		DEFDE6551B9DE76100BBFAF7 /* SelectToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFDE6541B9DE76100BBFAF7 /* SelectToggleCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		DE5135751B9C4E1D005A77D2 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		DE5135791B9C9909005A77D2 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		DE51357B1B9C9FEF005A77D2 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
+		DE65FC121B9E108400D25307 /* yelp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = yelp.gif; path = ../../../../Documents/yelp.gif; sourceTree = "<group>"; };
 		DEFDE6541B9DE76100BBFAF7 /* SelectToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectToggleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		222D8A4C19CCF9F900D2DB53 = {
 			isa = PBXGroup;
 			children = (
+				DE65FC121B9E108400D25307 /* yelp.gif */,
 				222D8A5719CCF9F900D2DB53 /* Yelp */,
 				222D8A6D19CCF9F900D2DB53 /* YelpTests */,
 				222D8A5619CCF9F900D2DB53 /* Products */,
@@ -276,6 +279,7 @@
 			files = (
 				222D8A6019CCF9F900D2DB53 /* Main.storyboard in Resources */,
 				222D8A6519CCF9F900D2DB53 /* LaunchScreen.xib in Resources */,
+				DE65FC131B9E108400D25307 /* yelp.gif in Resources */,
 				222D8A6219CCF9F900D2DB53 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
