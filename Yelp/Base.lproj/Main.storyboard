@@ -165,40 +165,11 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomHeaderCell" rowHeight="49" id="VvS-bA-yjm" customClass="CustomHeaderCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="99" width="375" height="49"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" layoutMarginsFollowReadableWidth="YES" tableViewCell="VvS-bA-yjm" id="akm-tM-Fga">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="48.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Categories" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C25-Rs-qs1">
-                                                    <rect key="frame" x="141" y="8" width="84" height="21"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="C25-Rs-qs1" secondAttribute="bottom" constant="8" id="VGi-ts-vBU"/>
-                                                <constraint firstAttribute="trailing" secondItem="C25-Rs-qs1" secondAttribute="trailing" constant="8" id="edQ-NY-pgz"/>
-                                                <constraint firstItem="C25-Rs-qs1" firstAttribute="top" secondItem="akm-tM-Fga" secondAttribute="top" constant="8" id="jgp-9t-yvT"/>
-                                                <constraint firstItem="C25-Rs-qs1" firstAttribute="leading" secondItem="akm-tM-Fga" secondAttribute="leading" constant="8" id="leb-fG-yzw"/>
-                                                <constraint firstItem="C25-Rs-qs1" firstAttribute="centerY" secondItem="akm-tM-Fga" secondAttribute="centerY" id="msA-zO-9zc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                        <connections>
-                                            <outlet property="headerLabel" destination="C25-Rs-qs1" id="pQZ-dE-Ku1"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="90" id="t79-Bh-9tK" customClass="SwitchCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="148" width="375" height="90"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="114" id="t79-Bh-9tK" customClass="SwitchCell" customModule="Yelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t79-Bh-9tK" id="aF9-WX-qgo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-Y3-xY0">
@@ -208,7 +179,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfW-8C-Aag">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HfW-8C-Aag">
                                                     <rect key="frame" x="316" y="10" width="51" height="31"/>
                                                     <animations/>
                                                 </switch>
@@ -226,6 +197,35 @@
                                         <connections>
                                             <outlet property="onSwitch" destination="HfW-8C-Aag" id="JYQ-KF-nhB"/>
                                             <outlet property="switchLabel" destination="U0A-Y3-xY0" id="szm-L7-S1f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectToggleCell" rowHeight="64" id="BhW-kH-N9U" customClass="SelectToggleCell" customModule="Yelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="213" width="375" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BhW-kH-N9U" id="Vdk-B2-Jms">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Show All" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pU0-3f-Olj">
+                                                    <rect key="frame" x="144" y="18" width="66" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pU0-3f-Olj" secondAttribute="trailing" constant="10" id="HLL-iH-REt"/>
+                                                <constraint firstItem="pU0-3f-Olj" firstAttribute="leading" secondItem="Vdk-B2-Jms" secondAttribute="leading" constant="10" id="MSX-L3-SxX"/>
+                                                <constraint firstAttribute="bottom" secondItem="pU0-3f-Olj" secondAttribute="bottom" constant="20" id="Nyg-VU-IBb"/>
+                                                <constraint firstItem="pU0-3f-Olj" firstAttribute="centerY" secondItem="Vdk-B2-Jms" secondAttribute="centerY" id="Urt-eh-YvL"/>
+                                                <constraint firstItem="pU0-3f-Olj" firstAttribute="centerX" secondItem="Vdk-B2-Jms" secondAttribute="centerX" id="w86-MV-Lfc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="pU0-3f-Olj" id="dtG-ag-vby"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

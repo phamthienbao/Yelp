@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, FiltersViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -57,7 +57,7 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
     private func loadData() {
         let progressView = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         progressView.labelText = "Please wait..."
-        Business.searchWithTerm(searchValue!, sort: .Distance, categories: nil, deals: nil) { (businesses: [Business]!, error: NSError!) -> Void in
+        Business.searchWithTerm(searchValue!, sort: .Distance, categories: nil, radius: nil, deals: nil) { (businesses: [Business]!, error: NSError!) -> Void in
             self.businesses = businesses
             
             for business in businesses {
@@ -84,15 +84,49 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let navigationController = segue.destinationViewController as! UINavigationController
+        
+        let filtersViewController = navigationController.topViewController as! FiltersViewController
+        
+        filtersViewController.delegate = self
     }
-    */
+    
+    func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
+//        
+        
+        //Deals
+        var deals = filters["deals"] as? Bool
+        
+        //Distance
+        var distance = filters["distance"] as? Float
+        
+        //Sort
+        var sortRawValue = filters["sortRawValue"] as? Int
+        var sort = (sortRawValue != nil) ? YelpSortMode(rawValue: sortRawValue!) : nil
+        
+        //Categories
+        var categories = filters["categories"] as? [String]
+        
+        Business.searchWithTerm("Restaurant", sort: sort, categories: categories, radius: distance, deals: deals) { (businesses: [Business]!, error: NSError!) -> Void in
+        
+            
+            self.businesses = businesses
+            self.tableView.reloadData()
+            
+        }
+        
+//        let categories = filters["categories"] as? [String]
+//        let distances = filters["radius"] as? [String]
+//
+//       
+//            
+//        Business.searchWithTerm(searchValue!, sort: nil, categories: categories, radius: nil, deals: nil) { (businesses: [Business]!, error: NSError!) -> Void in
+//            self.businesses = businesses
+//            self.tableView.reloadData()
+//        }
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let businesses = businesses
